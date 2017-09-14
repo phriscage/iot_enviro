@@ -1,0 +1,6 @@
+version: '3'
+services:
+  enviro:
+    build:
+      context: enviro
+    image: phriscage/iot_gpio-enviro

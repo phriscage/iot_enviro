@@ -1,0 +1,2 @@
+envirophat==0.0.6
+RPi.GPIO==0.6.3
