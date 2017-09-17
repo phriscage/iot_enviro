@@ -22,6 +22,7 @@ Temp: {t}c
 Pressure: {p}Pa
 Light: {c}
 RGB: {r}, {g}, {b}
+Accelerometer: {a}
 Heading: {h}
 Analog: 0: {a0}, 1: {a1}, 2: {a2}, 3: {a3}
 """.format(
@@ -31,6 +32,7 @@ Analog: 0: {a0}, 1: {a1}, 2: {a2}, 3: {a3}
         r = rgb[0],
         g = rgb[1],
         b = rgb[2],
+        a = motion.accelerometer(),
         h = motion.heading(),
         a0 = analog_values[0],
         a1 = analog_values[1],
