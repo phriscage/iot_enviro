@@ -6,6 +6,7 @@ services:
       - /dev/mem
       - /dev/i2c-1
     privileged: true
+    restart: always
     volumes: 
       - var-log:/var/log/iot_enviro:rw
     command: ["/bin/sh", "-c", "python app.py 1> /var/log/iot_enviro/data.log"]
