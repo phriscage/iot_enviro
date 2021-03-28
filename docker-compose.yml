@@ -1,14 +1,24 @@
 version: '3'
 services:
   enviro:
-    image: phriscage/iot_gpio-enviro
+    image: phriscage/iot_gpio-enviro:dev
     devices:
       - /dev/mem
       - /dev/i2c-1
     privileged: true
-    command: python app.py
+    volumes: 
+      - var-log:/var/log/iot_enviro:rw
+    command: ["/bin/sh", "-c", "python app.py 1> /var/log/iot_enviro/data.log"]
     deploy:
       mode: global
       placement:
         constraints:
           - node.role != manager
+
+volumes:
+  var-log:
+    driver: local
+    driver_opts: 
+      o: bind
+      type: none
+      device: /var/log/iot_enviro

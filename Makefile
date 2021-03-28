@@ -9,7 +9,7 @@ log:
 	docker-compose -f docker-compose.yml logs -f
 
 clean:
-	docker-compose -f docker-compose.yml stop && docker-compose -f docker-compose.yml 
+	docker-compose -f docker-compose.yml stop && docker-compose -f docker-compose.yml rm -f
 
 build:
 	docker-compose -f docker-compose.build.yml build
