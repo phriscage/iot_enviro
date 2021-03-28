@@ -13,8 +13,8 @@ Procure a Raspberry Pi device and privision with the latest Rasbian OS, Docker a
 * [Rasperry Pi Rasbian OS installed](https://www.raspberrypi.org/documentation/installation/installing-images/)
 * [Docker for Rasbian installed](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script)
 * [Configuration](#configuration)
-  * [I2C and GPIO](#i2c_and_gpio)
-  * [system](#system)
+  * [I2C and GPIO](#i2c-and-gpio)
+  * [System](#system)
 * Download this [repo](https://github.com/phriscage/iot_enviro)
 
 
@@ -22,7 +22,7 @@ Procure a Raspberry Pi device and privision with the latest Rasbian OS, Docker a
 Enable I2C, GPIO and system level components to run the application.
 
 
-#### I2c and Gpio
+#### I2C and GPIO
 Add *i2c-bcm2708* and *i2c-dev* to `/etc/modules` and `/etc/udev/rules.d/99-i2c.rules`
 
 	sudo echo "i2c-bcm2708" >> /etc/modules;
